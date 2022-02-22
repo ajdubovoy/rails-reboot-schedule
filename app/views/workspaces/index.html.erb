@@ -3,6 +3,6 @@
 
 <ul>
   <% @workspaces.each do |workspace| %>
-    <li><%= workspace.name %> (<%= workspace.address %>)</li>
+    <li><%= link_to workspace.name, workspace_path(workspace) %> (<%= workspace.address %>)</li>
   <% end %>
 </ul>
