@@ -12,5 +12,7 @@ Rails.application.routes.draw do
     # create: localhost:3000/workspaces/2/bookings/
     # 2 ^ params[:workspace_id]
   end
+
+  resources :bookings, only: [:show]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
