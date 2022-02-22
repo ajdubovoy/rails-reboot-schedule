@@ -3,3 +3,4 @@
 <p>It's a lovely office located at <%= @workspace.address %>.</p>
 
 <%= link_to "< Back to all", workspaces_path %>
+<%= link_to "Book it!", new_workspace_booking_path(@workspace) %>
