@@ -5,3 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+puts "Destroying everything..."
+Workspace.destroy_all
+User.destroy_all
+
+puts "Creating users"
+madeleine = User.create!(email: "madeleine@madeleine.com", password: "123456")
+seb = User.create!(email: "seb@seb.com", password: "123456")
+
+puts "Creating workspaces..."
+Workspace.create!(name: "Betahaus", address: "Checkpoint Charlie", user: madeleine)
+Workspace.create!(name: "Le Wagon", address: "Rudi-Dutschke Straße", user: seb)
