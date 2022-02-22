@@ -1,0 +1,8 @@
+<h1>All workspaces</h1>
+<p>You can work at any of these gorgeous offices.</p>
+
+<ul>
+  <% @workspaces.each do |workspace| %>
+    <li><%= workspace.name %> (<%= workspace.address %>)</li>
+  <% end %>
+</ul>
